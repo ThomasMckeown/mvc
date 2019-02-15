@@ -6,7 +6,7 @@
                 <li>
                     <a href="?class_id=<?php 
                               echo $class['class_id']; ?>">
-                        <?php echo $class['class_name']; ?>
+                        <?php echo $class['class_id']; ?>
                     </a>
                 </li>
                 <?php endforeach; ?>
