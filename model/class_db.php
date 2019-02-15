@@ -8,7 +8,7 @@ function get_classes() {
     return $statement; 
 }
 
-function get_class_name($class_id) {
+function get_class_id($class_id) {
     global $db;
     $query = 'SELECT * FROM classes
               WHERE class_id = :class_id';    
@@ -17,16 +17,16 @@ function get_class_name($class_id) {
     $statement->execute();    
     $class = $statement->fetch();
     $statement->closeCursor();    
-    $class_name = $class['class_name'];
-    return $class_name;
+    $class_id = $class['class_id'];
+    return $class_id;
 }
 
-function add_class($class_name) {
+function add_class($class_id) {
     global $db;
-    $query = 'INSERT INTO classes (class_name)
-              VALUES (:class_name)';
+    $query = 'INSERT INTO classes (class_id)
+              VALUES (:class_id)';
     $statement = $db->prepare($query);
-    $statement->bindValue(':class_name', $class_name);
+    $statement->bindValue(':class_id', $class_id);
     $statement->execute();
     $statement->closeCursor();    
 }
