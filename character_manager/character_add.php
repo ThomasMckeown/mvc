@@ -8,7 +8,7 @@
         <select name="class_id">
         <?php foreach ( $classes as $class ) : ?>
             <option value="<?php echo $class['class_id']; ?>">
-                <?php echo $class['class_name']; ?>
+                <?php echo $class['class_id']; ?>
             </option>
         <?php endforeach; ?>
         </select>
