@@ -8,19 +8,10 @@
         <input type="hidden" name="character_id"
                value="<?php echo $character['character_id']; ?>">
 
-<!--        <label>class:</label>
-        <select name="class_id">
-        <?php foreach ( $classes as $class ) : ?>
-            <option value="<?php echo $class['class_id']; ?>">
-                <?php echo $class['class_id']; ?>
-            </option>
-        <?php endforeach; ?>
-        </select>
-        <br>-->
 
         <label>Class:</label>
-        <input type="input" name="class_name"
-               value="<?php echo $character['class_name']; ?>">
+        <input type="input" name="class_id"
+               value="<?php echo $character['class_id']; ?>">
         <br>
 
         <label>Code:</label>
