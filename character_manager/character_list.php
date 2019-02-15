@@ -11,13 +11,12 @@
 
     <section>
         <!-- display a table of characters -->
-        <h2><?php echo $class_name; ?></h2>
+        <h2><?php echo $class_id; ?></h2>
         <table>
             <tr>
-                <th>character_id</th>
+<!--                <th>character_id</th>-->
                 <th>character_name</th>
                 <th class="right">pantheon</th>
-                <!--<th class="right">class_name</th>-->
                 <th class="right">rank</th>
                 <th class="right">strong_crowd_control</th>
                 
@@ -26,10 +25,9 @@
             </tr>
             <?php foreach ($characters as $character) : ?>
             <tr>
-                <td><?php echo $character['character_id']; ?></td>
+<!--                <td><?php echo $character['character_id']; ?></td>-->
                 <td><?php echo $character['character_name']; ?></td>
-                <td class="right"><?php echo $character['pantheon']; ?></td>
-                <!--<td class="right"><?php echo $character['class_name']; ?></td>-->
+                <td class="right"><?php echo $character['pantheon']; ?></td>               
                 <td class="right"><?php echo $character['rank']; ?></td>
                 <td class="right"><?php echo $character['strong_crowd_control']; ?></td>
                 <td><form action="." method="post">
