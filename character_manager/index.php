@@ -13,14 +13,13 @@ if ($action == NULL) {
 
 if ($action == 'list_characters') {
     // Get the current class ID
-    $class_id = filter_input(INPUT_GET, 'class_id', 
-            FILTER_VALIDATE_INT);
+    $class_id = filter_input(INPUT_GET, 'class_id');
     if ($class_id == NULL || $class_id == FALSE) {
-        $class_id = 1;
+        $class_id = $class_id;
     }
     
     // Get character and class data
-    $class_name = get_class_name($class_id);
+    $class_id = get_class_id($class_id);
     $classes = get_classes();
     $characters = get_characters_by_class($class_id);
 
@@ -39,8 +38,7 @@ if ($action == 'list_characters') {
 } else if ($action == 'update_character') {
     $character_id = filter_input(INPUT_POST, 'character_id', 
             FILTER_VALIDATE_INT);
-    $class_id = filter_input(INPUT_POST, 'class_id', 
-            FILTER_VALIDATE_INT);
+    $class_id = filter_input(INPUT_POST, 'class_id');
     $character_name = filter_input(INPUT_POST, 'character_name');
     $pantheon = filter_input(INPUT_POST, 'pantheon');
     $rank = filter_input(INPUT_POST, 'rank');
@@ -49,7 +47,7 @@ if ($action == 'list_characters') {
 
     // Validate the inputs
     if ($character_id == NULL || $character_id == FALSE || $class_id == NULL || 
-            $class_id == FALSE || $character_name == NULL || $pantheon == NULL || 
+           $character_name == NULL || $pantheon == NULL || 
             $rank == NULL || $strong_crowd_control == NULL) {
         $error = "Invalid character data. Check all fields and try again.";
         include('../errors/error.php');
@@ -62,9 +60,8 @@ if ($action == 'list_characters') {
 } else if ($action == 'delete_character') {
     $character_id = filter_input(INPUT_POST, 'character_id', 
             FILTER_VALIDATE_INT);
-    $class_id = filter_input(INPUT_POST, 'class_id', 
-            FILTER_VALIDATE_INT);
-    if ($class_id == NULL || $class_id == FALSE ||
+    $class_id = filter_input(INPUT_POST, 'class_id');
+    if ($class_id == NULL ||
             $character_id == NULL || $character_id == FALSE) {
         $error = "Missing or incorrect character id or class id.";
         include('../errors/error.php');
@@ -76,14 +73,13 @@ if ($action == 'list_characters') {
     $classes = get_classes();
     include('character_add.php');
 } else if ($action == 'add_character') {
-    $class_id = filter_input(INPUT_POST, 'class_id', 
-            FILTER_VALIDATE_INT);
+    $class_id = filter_input(INPUT_POST, 'class_id');
     $character_id = filter_input(INPUT_POST, 'character_id', FILTER_VALIDATE_INT);
     $character_name = filter_input(INPUT_POST, 'character_name');
     $pantheon = filter_input(INPUT_POST, 'pantheon');
     $rank = filter_input(INPUT_POST, 'rank');
     $strong_crowd_control = filter_input(INPUT_POST, 'strong_crowd_control');
-    if ($class_id == NULL || $class_id == FALSE || $character_id == NULL || $character_id == FALSE || 
+    if ($class_id == NULL || $character_id == NULL || $character_id == FALSE || 
             $character_name == NULL || $pantheon == NULL || $rank == NULL || $strong_crowd_control == NULL) {
         $error = "Invalid character data. Check all fields and try again.";
         include('../errors/error.php');
@@ -95,19 +91,18 @@ if ($action == 'list_characters') {
     $classes = get_classes();
     include('class_list.php');
 } else if ($action == 'add_class') {
-    $class_name = filter_input(INPUT_POST, 'class_name');
+    $class_id = filter_input(INPUT_POST, 'class_id');
 
     // Validate inputs
-    if ($class_name == NULL) {
+    if ($class_id == NULL) {
         $error = "Invalid class name. Check name and try again.";
         include('../errors/error.php');
     } else {
-        add_class($class_name);
+        add_class($class_id);
         header('Location: .?action=list_classes');  // display the class List page
     }
 } else if ($action == 'delete_class') {
-    $class_id = filter_input(INPUT_POST, 'class_id', 
-            FILTER_VALIDATE_INT);
+    $class_id = filter_input(INPUT_POST, 'class_id');
     delete_class($class_id);
     header('Location: .?action=list_classes');      // display the class List page
 }
