@@ -9,7 +9,7 @@
         </tr>
         <?php foreach ($classes as $class) : ?>
         <tr>
-            <td><?php echo $class['class_name']; ?></td>
+            <td><?php echo $class['class_id']; ?></td>
             <td>
                 <form id="delete_character_form"
                       action="index.php" method="post">
@@ -30,7 +30,7 @@
         <input type="hidden" name="action" value="add_class">
 
         <label>Name:</label>
-        <input type="input" name="class_name">
+        <input type="input" name="class_id">
         <input type="submit" value="Add">
     </form>
 
