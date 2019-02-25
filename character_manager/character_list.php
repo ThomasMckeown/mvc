@@ -1,4 +1,6 @@
-<?php include '../view/header.php'; ?>
+<?php include '../view/header.php'; 
+include "../model/database.php";
+?>
 <main>
 
     <h1>character List</h1>
@@ -15,6 +17,7 @@
         <table>
             <tr>
 <!--                <th>character_id</th>-->
+                <th>character_image</th>
                 <th>character_name</th>
                 <th class="right">pantheon</th>
                 <th class="right">rank</th>
@@ -26,6 +29,7 @@
             <?php foreach ($characters as $character) : ?>
             <tr>
 <!--                <td><?php echo $character['character_id']; ?></td>-->
+                <td><?php echo $character['character_image']; ?></td>
                 <td><?php echo $character['character_name']; ?></td>
                 <td class="right"><?php echo $character['pantheon']; ?></td>               
                 <td class="right"><?php echo $character['rank']; ?></td>
