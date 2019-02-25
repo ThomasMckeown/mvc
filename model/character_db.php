@@ -45,13 +45,14 @@ function delete_character($character_id) {
     $statement->closeCursor();
 }
 
-function add_character($class_id, $character_id, $character_name, $pantheon, $rank, $strong_crowd_control) {
+function add_character( $character_image, $class_id, $character_id, $character_name, $pantheon, $rank, $strong_crowd_control) {
     global $db;
     $query = 'INSERT INTO characters
-                 (class_id, character_id, character_name, pantheon, rank, strong_crowd_control)
+                 (character_image, class_id, character_id, character_name, pantheon, rank, strong_crowd_control)
               VALUES
-                 (:class_id, :character_id, :character_name, :pantheon, :rank, :strong_crowd_control)';
+                 (:character_image, :class_id, :character_id, :character_name, :pantheon, :rank, :strong_crowd_control)';
     $statement = $db->prepare($query);
+    $statement->bindValue(':character_image', $character_image);
     $statement->bindValue(':class_id', $class_id);
     $statement->bindValue(':character_id', $character_id);
     $statement->bindValue(':character_name', $character_name);
@@ -62,7 +63,7 @@ function add_character($class_id, $character_id, $character_name, $pantheon, $ra
     $statement->closeCursor();
 }
 
-function update_character($character_id, $class_id, $character_name, $pantheon, $rank, $strong_crowd_control) {
+function update_character($character_image, $character_id, $class_id, $character_name, $pantheon, $rank, $strong_crowd_control) {
     global $db;
     $query = 'UPDATE characters
               SET class_id = :class_id,
@@ -70,9 +71,11 @@ function update_character($character_id, $class_id, $character_name, $pantheon, 
                   character_name = :character_name,
                   pantheon = :pantheon,
                   rank = :rank,
-                  strong_crowd_control = :strong_crowd_control
+                  strong_crowd_control = :strong_crowd_control,
+                  :character_image = :character_image
                WHERE character_id = :character_id';
     $statement = $db->prepare($query);
+    $statement->bindValue(':character_image', $character_image);
     $statement->bindValue(':class_id', $class_id);
     $statement->bindValue(':character_id', $character_id);
     $statement->bindValue(':character_name', $character_name);
