@@ -7,7 +7,7 @@ body {
     width: 760px;
     margin: 0 auto;
     padding: 0 2em;
-    background-color: white;
+    background-color: #76b852;
     border: 1px solid black;
 }
 header {
@@ -115,4 +115,77 @@ form {
 }
 #add_character_form input[text] {
     width: 15em;
+}
+.topNav {
+    list-style-type: none;
+    width: 100%;
+    font-size: 10px;
+    position: absolute;
+    padding: 0%;
+    margin: 0%;
+    top: 2%;
+    left: 35%;
+    background: none;
+}
+
+nav li{
+    float: left;
+
+
+
+}
+
+nav li a{
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px;
+    border:solid 2px white;
+    border-radius: 50px;
+    padding: 10px 40px;
+    background-color: linear-gradient (to top, #76b852, #8DC26F);
+    color: white
+
+}
+
+nav li a:hover:not(.active){
+    background-color: green; 
+    color: rgb(208, 133, 4);
+}
+
+.active{
+    background-color: green; 
+    color: white ;
+}
+
+    .sub{
+        display: none;
+        position: absolute;
+        z-index: 1; 
+    }
+    .sub li{
+        padding: 0;
+        margin: 0;
+        font-size: 50%;
+        margin-left: -12em;
+        
+    }
+    #subM:hover .sub{
+        display: block;
+        background-color: #8DC26F;
+        
+    }
+     .sub a{
+        color: #479e98;
+        margin-right: 1em;
+        
+    }
+     header nav ul li{
+        font-size: 150%;
+        
+    }
+    
+.sideNav
+{
+    font-size: 10px;
+    
 }
