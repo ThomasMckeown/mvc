@@ -1,10 +1,10 @@
 
         <nav>
-            <ul>
+            <ul class="sideNav">
                 <!-- display links for all classes -->
                 <?php foreach($classes as $class) : ?>
                 <li>
-                    <a href="?class_id=<?php 
+                    <a  class="active" href="?class_id=<?php 
                               echo $class['class_id']; ?>">
                         <?php echo $class['class_id']; ?>
                     </a>
