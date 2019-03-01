@@ -7,7 +7,7 @@
             <a href="character_manager">character Manager</a>
         </li>
         <li>
-            <a href="character_catalog">character Catalog</a>
+            <a href="gallery.php">Gallery</a>
         </li>
     </ul>
 </main>
