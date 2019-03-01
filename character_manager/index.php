@@ -38,7 +38,6 @@ if ($action == 'list_characters') {
 } else if ($action == 'update_character') {
     $character_id = filter_input(INPUT_POST, 'character_id', 
             FILTER_VALIDATE_INT);
-     $character_image = filter_input(INPUT_POST, 'character_image');
     $class_id = filter_input(INPUT_POST, 'class_id');
     $character_name = filter_input(INPUT_POST, 'character_name');
     $pantheon = filter_input(INPUT_POST, 'pantheon');
@@ -47,13 +46,13 @@ if ($action == 'list_characters') {
     
 
     // Validate the inputs
-    if ($character_image == NULL || $character_id == NULL || $character_id == FALSE || $class_id == NULL || 
+    if ( $character_id == NULL || $character_id == FALSE || $class_id == NULL || 
            $character_name == NULL || $pantheon == NULL || 
             $rank == NULL || $strong_crowd_control == NULL) {
         $error = "Invalid character data. Check all fields and try again.";
         include('../errors/error.php');
     } else {
-        update_character($character_image, $character_id, $class_id, $character_name, $pantheon, $rank, $strong_crowd_control);
+        update_character($character_id, $class_id, $character_name, $pantheon, $rank, $strong_crowd_control);
 
         // Display the character List page for the current class
         header("Location: .?class_id=$class_id");
@@ -74,19 +73,18 @@ if ($action == 'list_characters') {
     $classes = get_classes();
     include('character_add.php');
 } else if ($action == 'add_character') {
-    $character_image = filter_input(INPUT_POST, 'character_image');
     $class_id = filter_input(INPUT_POST, 'class_id');
     $character_id = filter_input(INPUT_POST, 'character_id', FILTER_VALIDATE_INT);
     $character_name = filter_input(INPUT_POST, 'character_name');
     $pantheon = filter_input(INPUT_POST, 'pantheon');
     $rank = filter_input(INPUT_POST, 'rank');
     $strong_crowd_control = filter_input(INPUT_POST, 'strong_crowd_control');
-    if ($character_image == NULL || $class_id == NULL || $character_id == NULL || $character_id == FALSE || 
+    if ( $class_id == NULL || $character_id == NULL || $character_id == FALSE || 
             $character_name == NULL || $pantheon == NULL || $rank == NULL || $strong_crowd_control == NULL) {
         $error = "Invalid character data. Check all fields and try again.";
         include('../errors/error.php');
     } else { 
-        add_character($character_image, $class_id, $character_id, $character_name, $pantheon, $rank, $strong_crowd_control);
+        add_character($class_id, $character_id, $character_name, $pantheon, $rank, $strong_crowd_control);
         header("Location: .?class_id=$class_id");
     }
 } else if ($action == 'list_classes') {
