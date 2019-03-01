@@ -14,26 +14,28 @@
                value="<?php echo $character['class_id']; ?>">
         <br>
 
-        <label>Code:</label>
+        <label>Character ID:</label>
         <input type="input" name="character_id"
                value="<?php echo $character['character_id']; ?>">
         <br>
 
         <label>Name:</label>
-        <input type="input" name="character_name"
+        <input type="input" name="character_name" required
                value="<?php echo $character['character_name']; ?>">
         <br>
 
-        <label>List Price:</label>
-        <input type="input" name="pantheon"
+        <label>Pantheon:</label>
+        <input type="input" name="pantheon" required
                value="<?php echo $character['pantheon']; ?>">
+        <br>
         
-        <label>List Price:</label>
-        <input type="input" name="rank"
+        <label>Rank:</label>
+        <input type="input" name="rank" required
                value="<?php echo $character['rank']; ?>">
+        <br>
         
-        <label>List Price:</label>
-        <input type="input" name="strong_crowd_control"
+        <label>Strong Crowd Control:</label>
+        <input type="input" name="strong_crowd_control" required pattern="[YNyn]"
                value="<?php echo $character['strong_crowd_control']; ?>">
         <br>
 
