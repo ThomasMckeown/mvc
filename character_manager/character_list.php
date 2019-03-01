@@ -16,20 +16,19 @@ include "../model/database.php";
         <h2><?php echo $class_id; ?></h2>
         <table>
             <tr>
-<!--                <th>character_id</th>-->
-                <th>character_image</th>
-                <th>character_name</th>
-                <th class="right">pantheon</th>
-                <th class="right">rank</th>
-                <th class="right">strong_crowd_control</th>
+                <th>Character ID</th>
+<!--                <th>character_image</th>-->
+                <th>Name</th>
+                <th class="right">Pantheon</th>
+                <th class="right">Rank</th>
+                <th class="right">Strong Crowd Control</th>
                 
                 <th>&nbsp;</th>
                 <th>&nbsp;</th>
             </tr>
             <?php foreach ($characters as $character) : ?>
             <tr>
-<!--                <td><?php echo $character['character_id']; ?></td>-->
-                <td><?php echo $character['character_image']; ?></td>
+                <td><?php echo $character['character_id']; ?></td>
                 <td><?php echo $character['character_name']; ?></td>
                 <td class="right"><?php echo $character['pantheon']; ?></td>               
                 <td class="right"><?php echo $character['rank']; ?></td>
