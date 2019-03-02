@@ -10,13 +10,13 @@ In Smite, players control a god, goddess, or other mythological figure and take 
   - Conquest - 5v5
   - Arena - 5v5
   - Clash - 5v5
-  - Assualt -5v5
+  - Assaualt -5v5
   - Siege - 4v4
   - Joust - 3v3
   
   # Pantheons # 
   
-  - Artgurian
+  - Arthurian
   - Chinese
   - Celtic
   - Egyptian
@@ -32,8 +32,8 @@ In Smite, players control a god, goddess, or other mythological figure and take 
   
   # My System # 
   
-  This system allows the user to look up characters and their details. The system will alway the user to filter
-  characters by their class as showen below. To do this you can click on the different class buttons.
+  This system allows the user to look up characters and their details. The system will allow the user to filter
+  characters by their class as shown below. To do this you can click on the different class buttons.
   This will change the characters that are displayed with the ones categorised by the class you clicked on:
   
   
@@ -59,8 +59,8 @@ In Smite, players control a god, goddess, or other mythological figure and take 
   <img src="readMeImages/editCharacter.png" height="250">
   
   The users can also view what the characters look like in game as well as add images for any new characters.
-  The user can click on choose file which will then promopt the user to input an image. Once the user has done that 
-  you then click on insert and the image will appear along eith the rest of the images:
+  The user can click on choose file which will then prompt the user to input an image. Once the user has done that 
+  you then click on insert and the image will appear along side the rest of the images:
   
   <img src="readMeImages/gallery.png" height="250">
  
@@ -73,3 +73,11 @@ In Smite, players control a god, goddess, or other mythological figure and take 
 [sqlLink]: https://www.mysql.com/
 [xamppLink]: https://www.apachefriends.org/index.html
 [myphpadminLink]: https://www.phpmyadmin.net/downloads/
+
+
+# TO Do #
+
+  - Incorporate the upload image currently in gallery into the add and edit character details pages so the images are uploaded
+  there and they will appear beside the characters on the main page instead of on a separate gallery page
+  - Add more css to make the website more presentable 
+  - Add more features
