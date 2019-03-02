@@ -32,27 +32,35 @@ In Smite, players control a god, goddess, or other mythological figure and take 
   
   # My System # 
   
-  This system allows the user to look up characters and their details. the system will alway the user to filter
-  character by their class as showen below:
+  This system allows the user to look up characters and their details. The system will alway the user to filter
+  characters by their class as showen below. To do this you can click on the different class buttons.
+  This will change the characters that are displayed with the ones categorised by the class you clicked on:
   
   
   <img src="readMeImages/classes.png" height="200">
   
-  If these classes are not enough the can add as well as delete classes:
+  If these classes are not enough the can add as well as delete classes. This is done by clicking the delete button.
+  To add new classes simply type the class name into the text box and then click the add button:
   
   <img src="readMeImages/addClass.png" height="250">
   
   
-  The system also always the user to add new characters as the game is updated:
+  The system also always the user to add new characters as the game is updated. Once you have typed in all the 
+  characters details it will add it to the database and will be displayed under the class you categorised the 
+  character as:
   
   <img src="readMeImages/addCharacter.png" height="250">
   
   
-  If the user inputs details of a character incorrectly the system will also allow the user to edit the details:
+  If the user inputs details of a character incorrectly the system will also allow the user to edit the details. 
+  Once you have changed the details click on the save changes button and the updated character will appear
+  under the class you have categorised the character as:
   
   <img src="readMeImages/editCharacter.png" height="250">
   
-  The users can also view what the characters look like in game as well as add images for any new characters 
+  The users can also view what the characters look like in game as well as add images for any new characters.
+  The user can click on choose file which will then promopt the user to input an image. Once the user has done that 
+  you then click on insert and the image will appear along eith the rest of the images:
   
   <img src="readMeImages/gallery.png" height="250">
  
@@ -65,6 +73,3 @@ In Smite, players control a god, goddess, or other mythological figure and take 
 [sqlLink]: https://www.mysql.com/
 [xamppLink]: https://www.apachefriends.org/index.html
 [myphpadminLink]: https://www.phpmyadmin.net/downloads/
-
-  mention user can add images into gallery
-  
