@@ -32,11 +32,39 @@ In Smite, players control a god, goddess, or other mythological figure and take 
   
   # My System # 
   
-  This system allows the user to look up 
-  http://localhost/mvc/character_manager/?class_id=Assassin
+  This system allows the user to look up characters and their details. the system will alway the user to filter
+  character by their class as showen below:
   
-  add screenshot
-  mention they need mysql database
-  mention user can add, edit, delete character details
+  
+  <img src="readMeImages/classes.png" height="200">
+  
+  If these classes are not enough the can add as well as delete classes:
+  
+  <img src="readMeImages/addClass.png" height="250">
+  
+  
+  The system also always the user to add new characters as the game is updated:
+  
+  <img src="readMeImages/addCharacter.png" height="250">
+  
+  
+  If the user inputs details of a character incorrectly the system will also allow the user to edit the details:
+  
+  <img src="readMeImages/editCharacter.png" height="250">
+  
+  The users can also view what the characters look like in game as well as add images for any new characters 
+  
+  <img src="readMeImages/gallery.png" height="250">
+ 
+## What do you need to use the system ##
+
+   [MySQL][sqlLink]\
+   [XAMPP][xamppLink]\
+   [MyPHPAdmin][myphpadminLink]
+
+[sqlLink]: https://www.mysql.com/
+[xamppLink]: https://www.apachefriends.org/index.html
+[myphpadminLink]: https://www.phpmyadmin.net/downloads/
+
   mention user can add images into gallery
   
